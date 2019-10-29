@@ -1,24 +1,26 @@
 {
-  "name": "lab-26",
+  "name": "create-react-app-hoojacks",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "jest --verbose"
+  "bin": {
+    "create-react-app-hoojacks": "./index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sam-jespersen-401-advanced-javascript/lab-26.git"
+  "scripts": {
+    "jest": "jest --runInBand",
+    "test": "npm run jest -- --coverage",
+    "test:watch": "npm run jest -- --watchAll"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sam-jespersen-401-advanced-javascript/lab-26/issues"
-  },
-  "homepage": "https://github.com/sam-jespersen-401-advanced-javascript/lab-26#readme",
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^6.6.0",
+    "eslint-plugin-react": "^7.16.0",
     "jest": "^24.9.0"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }

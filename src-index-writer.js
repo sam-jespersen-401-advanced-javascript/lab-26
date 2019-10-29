@@ -9,9 +9,9 @@ module.exports = path => {
   }
 
   Promise.all([
-    fsPromise.readFile('./starter-code/src/index.html', 'utf8'),
-    fsPromise.readFile('./starter-code/src/index.js', 'utf8'),
-    fsPromise.readFile('./starter-code/src/setupTests.js', 'utf8'),
+    fsPromise.readFile(__dirname + '/starter-code/src/index.html', 'utf8'),
+    fsPromise.readFile(__dirname + '/starter-code/src/index.js', 'utf8'),
+    fsPromise.readFile(__dirname + '/starter-code/src/setupTests.js', 'utf8'),
   ])
     .then(data => {
       write(data[0], path + 'index.html');
