@@ -4,6 +4,6 @@ const deps = ['react', 'react-dom'];
 
 module.exports = path => {
 
-  installer(path, deps, false);
+  return installer(path, deps, false);
 
 };

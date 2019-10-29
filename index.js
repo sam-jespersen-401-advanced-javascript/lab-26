@@ -2,15 +2,15 @@
 
 const fs = require('fs');
 const path = require('path');
-const writePackage = require('./package-json-writer');
-const eslintWriter = require('./eslint-writer');
-const babelWriter = require('./babel-writer');
-const webpackWriter = require('./webpack-writer');
-const travisWriter = require('./travis-writer');
-const gitignoreWriter = require('./gitignore-writer');
-const srcIndexWriter = require('./src-index-writer');
-const dependenciesInstaller = require('./dependencies-installer');
-const devDependenciesInstaller = require('./dev-dependencies-installer');
+const writePackage = require(__dirname + '/package-json-writer');
+const eslintWriter = require(__dirname + '/eslint-writer');
+const babelWriter = require(__dirname + '/babel-writer');
+const webpackWriter = require(__dirname + '/webpack-writer');
+const travisWriter = require(__dirname + '/travis-writer');
+const gitignoreWriter = require(__dirname + '/gitignore-writer');
+const srcIndexWriter = require(__dirname + '/src-index-writer');
+const dependenciesInstaller = require(__dirname + '/dependencies-installer');
+const devDependenciesInstaller = require(__dirname + '/dev-dependencies-installer');
 
 const userPath = process.argv[2];
 

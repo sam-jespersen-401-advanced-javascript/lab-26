@@ -35,6 +35,6 @@ const devDeps = [
 
 module.exports = path => {
 
-  installer(path, devDeps, true);
+  return installer(path, devDeps, true);
 
 };
