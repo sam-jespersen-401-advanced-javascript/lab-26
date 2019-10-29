@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const writePackage = require('./package-json-writer');
@@ -15,6 +17,7 @@ const userPath = process.argv[2];
 if(userPath !== '.' && !fs.existsSync(userPath)) {
   fs.mkdirSync(userPath);
 }
+
 Promise.all([
   writePackage(path.join(userPath, 'package.json')),
   eslintWriter(path.join(userPath, '.eslintrc')),

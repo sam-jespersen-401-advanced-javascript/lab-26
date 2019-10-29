@@ -1,10 +1,9 @@
 const installer = require('./installer');
-const dependencies = require('./starter-code/package.json').dependencies;
 
-const packages = Object.keys(dependencies);
+const deps = ['react', 'react-dom'];
 
 module.exports = path => {
 
-  installer(path, packages, false);
+  installer(path, deps, false);
 
 };

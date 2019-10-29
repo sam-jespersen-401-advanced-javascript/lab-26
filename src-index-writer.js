@@ -11,9 +11,11 @@ module.exports = path => {
   Promise.all([
     fsPromise.readFile('./starter-code/src/index.html', 'utf8'),
     fsPromise.readFile('./starter-code/src/index.js', 'utf8'),
+    fsPromise.readFile('./starter-code/src/setupTests.js', 'utf8'),
   ])
     .then(data => {
       write(data[0], path + 'index.html');
       write(data[1], path + 'index.js');
+      write(data[2], path + 'setupTests.js');
     });
 };
